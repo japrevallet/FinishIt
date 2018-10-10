@@ -1,0 +1,42 @@
+﻿@model FinishIt.ViewModel.ReadStateViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Let's Find Your Leaders</h2>
+
+<form asp-controller="FindUrLeader" asp-action="FindLeaders" method="get">
+    <div class="form-group">
+        <label asp-for="StateID"></label>
+        <select asp-for="StateID" asp-items="Model.States"></select>
+    </div>
+
+    <input type="submit" value="Find Leaders" />
+</form>
+<br />
+<br />
+<a asp-controller="FindUrLeader" asp-action="SelectParty">Nevermind - Find By Party</a>
+<br />
+<br />
+<a asp-controller="FindUrLeader" asp-action="AddState" method="get">Add State(Editor Role required for access)</a>
+
+<div>
+    @*@{
+        List<FinishIt.Models.State> states = ViewBag.states;
+    }
+
+    <table>
+        <tr>
+            <td>State ID</td>
+            <td>State Name</td>
+        </tr>
+        @foreach (var state in states)
+        {
+            <tr>
+                <td>@state.StateID</td>
+                <td>@state.StateName</td>
+            </tr>
+        }
+
+    </table>*@
+</div>

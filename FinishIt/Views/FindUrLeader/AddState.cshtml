@@ -1,0 +1,25 @@
+﻿@model FinishIt.ViewModel.AddStateViewModel
+
+
+<h4>AddStateViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="FindUrLeader" asp-action="AddState" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StateName" class="control-label"></label>
+                <input asp-for="StateName" class="form-control" />
+                <span asp-validation-for="StateName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add State" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="SelectState">Back to State Selection</a>
+</div>
+

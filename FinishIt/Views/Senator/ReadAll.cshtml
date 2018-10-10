@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "ReadAll";
+}
+
+<h2>ReadAll</h2>
+
+@{
+    List<FinishIt.Models.Senator> senators = ViewBag.senators;
+}
+<table border="1">
+    <tr>
+        <td>Senator ID</td>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Occupation</td>
+        <td>Swore Oath of Office On</td>
+        <td>Seat up for election On</td>
+        <td>Represents State</td>
+        <td>Represents Party</td>
+    </tr>
+    @foreach (var senator in senators)
+    {
+    <tr>
+        <td>@senator.SenatorID</td>
+        <td>@senator.SenatorName</td>
+        <td>@senator.Age</td>
+        <td>@senator.Occupation</td>
+        <td>@senator.YearsServed</td>
+        <td>@senator.SeatUp</td>
+        @*<td>@senator.StateID</td>
+        <td>@senator.PartyID</td>*@
+        <td>@senator.State.StateName</td>
+        <td>@senator.Party.PartyName</td>
+
+    </tr>
+    }
+</table>

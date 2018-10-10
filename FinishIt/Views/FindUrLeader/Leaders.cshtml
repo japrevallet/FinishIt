@@ -1,0 +1,31 @@
+﻿@model IList<FinishIt.Models.Senator>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Leaders @ViewBag.Title</title>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Party</th>
+        </tr>
+        
+            @foreach (var senator in Model)
+            {
+                <tr>
+                    <td>@senator.SenatorName</td>
+                    <td>@senator.Party</td>
+                </tr>
+
+            }
+        
+    </table>
+</head>
+<body>
+</body>
+</html>

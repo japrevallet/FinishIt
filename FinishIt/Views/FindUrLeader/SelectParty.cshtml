@@ -1,0 +1,17 @@
+﻿@model FinishIt.ViewModel.AllPartySenatorsViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Let's Find All Party Members</h2>
+
+<form asp-controller="FindUrLeader" asp-action="PartyMembers" method="get">
+    <div class="form-group">
+        <label asp-for="PartyID"></label>
+        <select asp-for="PartyID" asp-items="Model.AllParties"></select>
+    </div>
+
+    <input type="submit" value="Find Leaders" />
+</form>
+
+<a asp-controller="FindUrLeader" asp-action="SelectState">Nevermind - Find By State</a>

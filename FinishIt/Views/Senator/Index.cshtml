@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Senator- Index</h2>
+
+@using (Html.BeginForm("ReadSenator", "Senator", FormMethod.Get))
+{
+<div>
+    @Html.Label("Find a Senator by ID") : @Html.TextBox("SenatorID") 
+    <input type="submit" value="GetTheSenator" /> <br /> <br />
+    <a asp-area="" asp-controller="Senator" asp-action="ReadAll">Fuck it, just LIST THEM ALL!</a>
+</div>
+}
