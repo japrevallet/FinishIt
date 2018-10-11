@@ -68,7 +68,7 @@ using FinishIt.ViewModel;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(58, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "31dc2f89332248b986157a610a2bc29c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dd1672fecb7c4f3a94266aa79f92bf8b", async() => {
                 BeginContext(64, 96, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>In Development</title>\r\n");
                 EndContext();
@@ -88,7 +88,7 @@ using FinishIt.ViewModel;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(169, 101, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2725ff8d364f4486ae53699261d2f07b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "933d209456b44d699a2e33999fa3c761", async() => {
                 BeginContext(175, 88, true);
                 WriteLiteral("\r\n    <h1>In Development</h1>\r\n    <h2>Only Acessesable from Login Authentication</h2>\r\n");
                 EndContext();

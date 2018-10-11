@@ -66,7 +66,7 @@ using FinishIt.ViewModel;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(102, 62, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "53bc8f76ce3241848eaf6331615935bd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c50da89f4d5400aa72824b4e0e5b7f4", async() => {
                 BeginContext(152, 8, true);
                 WriteLiteral("Register");
                 EndContext();

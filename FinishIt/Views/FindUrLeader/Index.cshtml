@@ -1,8 +1,9 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+    ViewBag.Title = "Hi do i work?";
 }
-
-<a asp-controller="FindUrLeader" asp-action="SelectState">Find By State</a>
-<br />
-<a asp-controller="FindUrLeader" asp-action="SelectParty">Find By Party</a>
+<div class="col-md-6">
+    <a asp-controller="FindUrLeader" asp-action="SelectState">Find By State</a>
+</div>
+<div class="col-md-6">
+    <a asp-controller="FindUrLeader" asp-action="SelectParty">Find By Party</a>
+</div>

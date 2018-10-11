@@ -13,13 +13,12 @@
 
     <input type="submit" value="Find Leaders" />
 </form>
-<br />
-<br />
-<a asp-controller="FindUrLeader" asp-action="SelectParty">Nevermind - Find By Party</a>
-<br />
-<br />
-<a asp-controller="FindUrLeader" asp-action="AddState" method="get">Add State(Editor Role required for access)</a>
-
+<div class="col-md-6">
+    <a asp-controller="FindUrLeader" asp-action="SelectParty">Nevermind - Find By Party</a>
+</div>
+<div class="col-md-6">
+    <a asp-controller="FindUrLeader" asp-action="AddState" method="get">Add State(Editor Role required for access)</a>
+</div>
 <div>
     @*@{
         List<FinishIt.Models.State> states = ViewBag.states;
