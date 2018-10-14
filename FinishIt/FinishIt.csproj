@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="node_modules\bootstrap\dist\css\" />
     <Folder Include="wwwroot\lib\scripts\" />
   </ItemGroup>
 

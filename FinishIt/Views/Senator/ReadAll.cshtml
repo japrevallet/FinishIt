@@ -3,11 +3,10 @@
 }
 
 @{
-    List<FinishIt.Models.Senator> senators = ViewBag.senators;
+    List<Senator> senators = ViewBag.senators;
 }
 <table border="1">
     <tr>
-        <td>Senator ID</td>
         <td>Name</td>
         <td>Age</td>
         <td>Occupation</td>
@@ -19,7 +18,6 @@
     @foreach (var senator in senators)
     {
     <tr>
-        <td>@senator.SenatorID</td>
         <td>@senator.SenatorName</td>
         <td>@senator.Age</td>
         <td>@senator.Occupation</td>
@@ -33,3 +31,5 @@
     </tr>
     }
 </table>
+<br/><br/>
+     <a asp-controller="Senator" asp-action="Index">Back to Senator Selector</a>

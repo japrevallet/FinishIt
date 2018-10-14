@@ -1,21 +1,20 @@
 ﻿
-@{
-    ViewData["Title"] = "ReadSenator";
-}
-
-<h2>ReadSenator</h2>
+<h2>Read Senator</h2>
 
 @{ 
-    FinishIt.Models.Senator senator = ViewBag.mySenator;
+    Senator senator = ViewBag.mySenator;
 }
 
 <div>
     SenatorID : @senator.SenatorID <br />
     Full Name : @senator.SenatorName <br />
-    Represents State in Congress : @senator.State @senator.StateID<br /> @*Not showing @senator.State *@
-    Represents party in Congress : @senator.Party @senator.PartyID<br /> @*Not showing @senator.Party *@
+    Represents State in Congress :  @senator.StateID @*@senator.State.StateName*@<br /> @*Not showing @senator.State *@
+    Represents party in Congress :  @senator.PartyID @*@senator.Party.PartyName*@<br /> @*Not showing @senator.Party *@
     Age : @senator.Age <br />
     Date Oath of Officer was taken : @senator.YearsServed <br />
     Seat up for Election in : @senator.SeatUp <br />
     Occupation : @senator.Occupation
 </div>
+<br/>
+<br/>
+<a asp-controller="Senator" asp-action="Index">Back to Senator Selector</a>

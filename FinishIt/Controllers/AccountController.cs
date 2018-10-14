@@ -20,6 +20,7 @@ namespace FinishIt.Controllers
             signInManager = _signInManager;
         }
 
+
         public IActionResult Index()
         {
             return View();
@@ -78,6 +79,10 @@ namespace FinishIt.Controllers
         [HttpGet]
         public IActionResult LogIn()
         {
+            if (this.User.Identity.IsAuthenticated) //prevents LogIn User from accessing LogIn Page
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
 
@@ -89,6 +94,8 @@ namespace FinishIt.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
+
+            ModelState.AddModelError("", "Failed to login");
             return View();
         }
 

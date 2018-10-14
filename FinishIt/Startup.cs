@@ -17,9 +17,11 @@ namespace FinishIt
 {
     public class Startup
     {
+        private readonly IConfiguration _config;
+
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _config = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -34,7 +36,7 @@ namespace FinishIt
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ApplicationDbContext>(); //injecting object
+            services.AddDbContext<ApplicationDbContext>(); //injecting dbObject
 
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>()  //injecting identity dependency 
                 .AddDefaultTokenProviders(); //token dependency
@@ -75,7 +77,7 @@ namespace FinishIt
                 app.UseHsts();
             }
 
-            app.UseAuthentication();
+            app.UseAuthentication(); //keep at the top
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

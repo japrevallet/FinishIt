@@ -3,9 +3,11 @@
 
 <h1>@ViewBag.Title</h1>
 
-<ul>
+<div class="row">
     @foreach (var senator in Model)
     {
-        <li><a asp-area="" asp-controller="UserHome" asp-action="Index">@senator.SenatorName</a></li>
+    <div class="col-md-6">
+        <a asp-area="" asp-controller="UserHome" asp-action="Index">@senator.SenatorName</a>
+    </div>
     }
-</ul>
+</div>
